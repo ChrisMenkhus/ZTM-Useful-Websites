@@ -28,15 +28,43 @@ var websiteCards = [
 		websiteLink: "https://getbootstrap.com/docs/4.3/getting-started/introduction",
 		description: "Gives you a CSS foundation to play with, making website creation easier and funner",
 		image: "images/bootstrap.png"
-	},
+	}
 ];
+
+var myNewCard;
 
 function newCard() {
 	var grid = document.querySelector(".gridContainer");
 	var cardTemplate = document.querySelector(".cardTemplate");
 	var newCard = cardTemplate.cloneNode(true);
 	grid.appendChild(newCard);
+	
+	
+	
+	myNewCard = newCard;
 	return newCard;
 };
+
+
+function populateCardWithData(card, i) {
+	 card.children[0].children[0].innerText = websiteCards[i].websiteName;
+};
+
+
+x = -1;
+
+websiteCards.forEach(
+	function() {
+		newCard();
+		x++;
+		populateCardWithData(myNewCard, x);
+	}
+)
+
+
+
+
+
+
 
 
