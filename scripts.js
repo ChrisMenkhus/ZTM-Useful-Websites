@@ -42,6 +42,12 @@ var websiteCards = [
 		websiteLink: "https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/",
 		description: "Learn everything you need to know to get a job in web development",
 		image: "images/ztm.png"
+	},
+	{
+		websiteName: "Github",
+		websiteLink: "https://github.com/",
+		description: "Get git.",
+		image: "images/tv.jpg"
 	}
 
 ];
